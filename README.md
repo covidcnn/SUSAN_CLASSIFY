@@ -1,6 +1,7 @@
 # SUSAN_CLASSIFY
 Classification Project
 
+Form1.cs file for Extract genom data from FASTA and Create motifs. 
 
 SARS-CoV-2 RNA seq classification
 RNA Motif files
