@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string[] genom_files = Directory.GetFiles(@"C:\DOKTORA\COVID\extract4\", "*.genom");
+            string[] genom_files = Directory.GetFiles(@"C:\COVID\extract4\", "*.genom");
 
 
             foreach (string file_name in genom_files)
@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
                 }
             }
                 int c = 8000 + int.Parse(Path.GetFileNameWithoutExtension(file_name));
-                bmp.Save(@"c:\DOKTORA\COVID\picto4-austr\" + c.ToString() + ".png");
+                bmp.Save(@"c:\COVID\picto4-austr\" + c.ToString() + ".png");
             Console.WriteLine(say.ToString());
 
             }
@@ -218,7 +218,7 @@ namespace WindowsFormsApp1
             Regex MyRegex = new Regex("(>.*\\|\\scomplete genome)(.*?)", RegexOptions.Compiled);
 
             int satir = 1;
-            string text = System.IO.File.ReadAllText(@"C:\DOKTORA\COVID\sequences_2.fasta");
+            string text = System.IO.File.ReadAllText(@"C:\COVID\sequences_2.fasta");
 
             //// Replace the matched text in the InputText using the replacement pattern
             // string result = MyRegex.Replace(InputText,MyRegexReplace);
@@ -234,7 +234,7 @@ namespace WindowsFormsApp1
                     if (g.StartsWith(">") == false)
                     {
                         my_genome = g.Replace("\r\n", "").Replace("\n","");
-                        File.WriteAllText(@"C:\DOKTORA\COVID\extract1\" + satir.ToString() +".genom", my_genome);
+                        File.WriteAllText(@"C:\COVID\extract1\" + satir.ToString() +".genom", my_genome);
 // textBox1.Text += satir.ToString() + "_" + results[line_n - 2].ToString().Substring(1, results[line_n - 2].ToString().IndexOf(" |"))+"\r\n";
                         textBox1.Text += satir.ToString() + ";" + results[line_n - 2].ToString().Replace("|",";") + "\r\n";
                         satir += 1;
@@ -249,7 +249,7 @@ namespace WindowsFormsApp1
             Regex MyRegex = new Regex("(>.*\\s\\|\\s.*)(.*?)", RegexOptions.Compiled);
 
             int satir = 1;
-            string text = System.IO.File.ReadAllText(@"C:\DOKTORA\COVID\all.fasta");
+            string text = System.IO.File.ReadAllText(@"C:\COVID\all.fasta");
 
             //// Replace the matched text in the InputText using the replacement pattern
             // string result = MyRegex.Replace(InputText,MyRegexReplace);
@@ -269,7 +269,7 @@ namespace WindowsFormsApp1
                         {
                             if (my_genome.Contains("NNNNNNNN") == false)
                             {
-                                File.WriteAllText(@"C:\DOKTORA\COVID\extract1\" + satir.ToString() + ".genom", my_genome);
+                                File.WriteAllText(@"C:\COVID\extract1\" + satir.ToString() + ".genom", my_genome);
                                 // textBox1.Text += satir.ToString() + "_" + results[line_n - 2].ToString().Substring(1, results[line_n - 2].ToString().IndexOf(" |"))+"\r\n";
                                 textBox1.Text += satir.ToString() + ";" + results[line_n - 2].ToString().Replace("|", ";") + "\r\n";
                                 satir += 1;
@@ -287,7 +287,7 @@ namespace WindowsFormsApp1
 
             foreach(int sayy in aa)
             {
-                string text = System.IO.File.ReadAllText(@"C:\DOKTORA\COVID\extract1\" + sayy.ToString() + ".genom");
+                string text = System.IO.File.ReadAllText(@"C:\COVID\extract1\" + sayy.ToString() + ".genom");
                 char[] arr;
 
                 arr = text.ToCharArray();
@@ -335,7 +335,7 @@ namespace WindowsFormsApp1
             Regex MyRegex = new Regex("(>.*\\|.*)(.*?)", RegexOptions.Compiled);
 
             int satir = 1;
-            string text = System.IO.File.ReadAllText(@"C:\DOKTORA\COVID\asia_son_.fasta");
+            string text = System.IO.File.ReadAllText(@"C:\COVID\asia_son_.fasta");
 
             //// Replace the matched text in the InputText using the replacement pattern
             // string result = MyRegex.Replace(InputText,MyRegexReplace);
@@ -355,7 +355,7 @@ namespace WindowsFormsApp1
                         {
                             if (my_genome.ToUpper().Contains("NNNN") == false)
                             {
-                                File.WriteAllText(@"C:\DOKTORA\COVID\extract3\" + satir.ToString() + ".genom", my_genome.ToUpper());
+                                File.WriteAllText(@"C:\COVID\extract3\" + satir.ToString() + ".genom", my_genome.ToUpper());
                                 // textBox1.Text += satir.ToString() + "_" + results[line_n - 2].ToString().Substring(1, results[line_n - 2].ToString().IndexOf(" |"))+"\r\n";
                                 textBox1.Text += satir.ToString() + ";" + results[line_n - 2].ToString().Replace("|", ";") + "\r\n";
                                 satir += 1;
@@ -372,7 +372,7 @@ namespace WindowsFormsApp1
             Regex MyRegex = new Regex("(>.*\\|.*)(.*?)", RegexOptions.Compiled);
 
             int satir = 1;
-            string text = System.IO.File.ReadAllText(@"C:\DOKTORA\COVID\all_australia.fasta");
+            string text = System.IO.File.ReadAllText(@"C:\COVID\all_australia.fasta");
 
             //// Replace the matched text in the InputText using the replacement pattern
             // string result = MyRegex.Replace(InputText,MyRegexReplace);
@@ -394,7 +394,7 @@ namespace WindowsFormsApp1
                             {
                                 if (my_genome.ToUpper().Contains("NNNN") == false)
                                 {
-                                    File.WriteAllText(@"C:\DOKTORA\COVID\extract4\" + satir.ToString() + ".genom", my_genome.ToUpper());
+                                    File.WriteAllText(@"C:\COVID\extract4\" + satir.ToString() + ".genom", my_genome.ToUpper());
                                     // textBox1.Text += satir.ToString() + "_" + results[line_n - 2].ToString().Substring(1, results[line_n - 2].ToString().IndexOf(" |"))+"\r\n";
                                     textBox1.Text += satir.ToString() + ";" + results[line_n - 2].ToString().Replace("|", ";") + "\r\n";
                                     satir += 1;
